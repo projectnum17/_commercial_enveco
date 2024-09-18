@@ -1,0 +1,353 @@
+.activity {
+  margin-bottom: 140px;
+  padding: 0 30px;
+  overflow: hidden;
+
+  @media screen and (max-width: 1120px) {
+    padding: 0;
+    margin-bottom: 100px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 80px;
+  }
+
+  &-container {
+    background: $ligth-bg;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 100%;
+      background: #f7f7f7;
+      top: -50%;
+      left: 0%;
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 100%;
+      background: #f7f7f7;
+      bottom: -50%;
+      right: 0%;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__content {
+    padding-top: 80px;
+    padding-bottom: 76px;
+
+    @media screen and (max-width: 1120px) {
+      padding-top: 60px;
+      padding-bottom: 80px;
+    }
+    &-title {
+      h2 {
+        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 49px;
+
+        color: $green-color;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: 1120px) {
+          font-size: 33px;
+          line-height: 46px;
+          letter-spacing: 0.02em;
+        }
+      }
+    }
+  }
+}
+
+.activity {
+  .activity-container {
+    .container {
+      //padding: 0;
+      @media screen and (max-width: 1120px) {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.activity__content-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.activity__content-cards__item {
+  position: relative;
+  border: 1px solid #339e25;
+  background: $ligth-bg;
+  height: 255px;
+  display: flex;
+  transition: 0.2s linear;
+  background: transparent;
+  overflow: hidden;
+
+  clip-path: polygon(
+    20px 0,
+    100% 0,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0 100%,
+    0 20px
+  );
+
+  a {
+    padding: 26px 17px 19px 20px;
+
+    flex: 1;
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      transform: rotate(45deg);
+      background: #339e25;
+      width: 2px;
+      height: 100%;
+      top: -43.5%;
+      left: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      transform: rotate(45deg);
+      background: #339e25;
+      width: 1px;
+      height: 100%;
+      bottom: -43%;
+      right: 0;
+    }
+
+    h3 {
+      max-width: 218px;
+      display: flex;
+      align-items: end;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 31px;
+      flex: 1;
+      margin-top: 0;
+      color: $decr-color;
+      transition: 0.2s linear;
+    }
+  }
+}
+
+.activity__content-cards__item:hover {
+  background: #1d7e33;
+  border: 1px solid transparent;
+}
+
+.activity__content-cards__item:hover a h3 {
+  color: #fff;
+}
+
+.activity__content-cards__item:hover .cards-symbol,
+.activity__content-cards__item:hover .cards-arrow {
+  svg {
+    path {
+      stroke: #fff;
+    }
+  }
+}
+
+.activity__content-cards__item:hover .cards-arrow {
+  transform: rotate(90deg);
+}
+
+.cards-symbol {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.2s linear;
+
+  svg {
+    path {
+      stroke: #1d7e33;
+    }
+  }
+}
+
+.cards-arrow {
+  max-width: 40px;
+  max-height: 40px;
+  transition: 0.2s linear;
+
+  svg {
+    width: 100%;
+    height: 100%;
+
+    path {
+      stroke: #1d7e33;
+    }
+  }
+}
+
+.activity__content-link {
+  margin: 0 auto;
+  width: 100%;
+  border: 1px solid #339e25;
+  transition: 0.2s linear;
+  height: 67px;
+  background: transparent;
+  position: relative;
+
+  clip-path: polygon(
+    15px 0,
+    100% 0,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    0 100%,
+    0 15px
+  );
+
+  a {
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+    transition: 0.2s linear;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      transform: rotate(45deg);
+      background: #339e25;
+      width: 1px;
+      height: 100%;
+      top: -33%;
+      left: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      transform: rotate(45deg);
+      background: #339e25;
+      width: 1px;
+      height: 100%;
+      bottom: -29%;
+      right: 0;
+    }
+
+    span {
+      display: block;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 25px;
+      text-align: center;
+      transition: 0.2s linear;
+
+      color: $decr-color;
+    }
+  }
+}
+
+.activity__content-link:hover {
+  background: #1d7e33;
+  border: 1px solid transparent;
+}
+
+.activity__content-link:hover a span {
+  color: #fff;
+}
+
+.activity {
+  .container {
+    .activity__content {
+      .projects__cards-link {
+        a {
+          &::after,
+          &::before {
+            background: #ebf4ed;
+          }
+        }
+      }
+    }
+  }
+}
+
+.card-slider__activity {
+  .activity__content-cards {
+    .card-slider__slide {
+      a {
+        transition: 0.2s linear;
+        background: transparent;
+
+        h3 {
+          font-weight: 700;
+        }
+
+        .cards-arrow {
+          svg {
+            path {
+              transition: 0.2s linear;
+              stroke: #1d7e33;
+            }
+          }
+        }
+
+        .cards-symbol {
+          svg {
+            g {
+              path {
+                transition: 0.2s linear;
+                stroke: #1d7e33;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          background: #1d7e33;
+          h3 {
+            color: #fff;
+            font-weight: 700;
+          }
+
+          .cards-arrow {
+            svg {
+              path {
+                transition: 0.2s linear;
+                stroke: #fff;
+              }
+            }
+          }
+
+          .cards-symbol {
+            svg {
+              g {
+                path {
+                  transition: 0.1s linear;
+                  stroke: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      h3 {
+        transition: 0.2s linear;
+      }
+    }
+  }
+}

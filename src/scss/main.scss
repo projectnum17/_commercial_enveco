@@ -1,0 +1,38 @@
+// base include
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// include components
+@import "./components/header-1";
+@import "./components/footer";
+@import "./components/header";
+
+//main article
+@import "./components/pageMain/pageMainIntro";
+@import "./components/pageMain/pageMainAbout";
+@import "./components/pageMain/pageMainDevelop";
+@import "./components/pageMain/pageMainActivity";
+@import "./components/pageMain/pageMainProject";
+
+//activity article
+@import "./components/pageActivity/pageActivityItem";
+
+//projects article
+@import "./components/pageProjects/pageProjectsItem";
+
+//team article
+@import "./components/pageTeam/pageTeamItem";
+
+//team card article
+@import "./components/pageTeamCard/pageTeamCardItem";
+
+//project item article
+@import "./components/pageProjectArticle/pageProjectArticleItem";
+
+//activity item article
+@import "./components/pageActivityArticle/pageActivityArticleItem";
+
+//service item article
+@import "./components/pageService/pageServiceItem";

@@ -1,0 +1,453 @@
+.team__intro {
+  margin-bottom: 140px;
+  padding-top: 109px;
+
+  @media screen and (max-width: 1020px) {
+    margin-bottom: 100px;
+  }
+
+  @media screen and (max-width: 976px) {
+    padding-top: 93px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 60px;
+    padding-top: 103px;
+  }
+
+  &-wrapper {
+    max-width: 1440px;
+    padding: 0 30px;
+    margin: 0 auto;
+    position: relative;
+
+    @media screen and (max-width: 1020px) {
+      padding: 0 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
+
+    &__img {
+      height: 500px;
+      max-width: 1440px;
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 100%;
+        background: #f7f7f7;
+        top: -50%;
+        left: 0%;
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 100%;
+        background: #f7f7f7;
+        bottom: -50%;
+        right: 0%;
+        transform: rotate(45deg);
+      }
+
+      @media screen and (max-width: 1020px) {
+        height: 400px;
+      }
+
+      @media screen and (max-width: 768px) {
+        height: 320px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      position: absolute;
+      top: 80px;
+      left: 165px;
+      max-width: 839px;
+
+      @media screen and (max-width: 1020px) {
+        max-width: 565px;
+        top: 60px;
+        left: 60px;
+      }
+
+      @media screen and (max-width: 768px) {
+        max-width: 334px;
+        top: 60px;
+        left: 20px;
+      }
+
+      h1 {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 70px;
+        letter-spacing: 0.02em;
+
+        color: #fff;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 1020px) {
+          font-size: 55px;
+          line-height: 61px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 33px;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+}
+
+.team__cards {
+  margin-bottom: 140px;
+
+  @media screen and (max-width: 1020px) {
+    margin-bottom: 100px;
+  }
+
+  &-title {
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 50px;
+
+      color: #1d7e33;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 768px) {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 39px;
+        letter-spacing: 0.02em;
+      }
+    }
+  }
+
+  &-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+
+    @media screen and (max-width: 1020px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 40px 0px;
+      margin-bottom: 60px;
+    }
+
+    &__card {
+      a {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media screen and (max-width: 1020px) {
+          width: 100%;
+        }
+      }
+
+      &-thumb {
+        max-width: 255px;
+        height: 320px;
+        overflow: hidden;
+        position: relative;
+
+        @media screen and (max-width: 1020px) {
+          height: 420px;
+          max-width: 100%;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 100%;
+          background: #f7f7f7;
+          top: -50%;
+          left: 0%;
+          transform: rotate(45deg);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 25px;
+          height: 100%;
+          background: #f7f7f7;
+          bottom: -50%;
+          right: 0%;
+          transform: rotate(45deg);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &-title {
+        p {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22px;
+
+          color: #191919;
+          transition: 0.2s linear;
+        }
+      }
+    }
+  }
+}
+
+.team__cards-items__card {
+  a:hover {
+    .team__cards-items__card-title {
+      p {
+        color: #1d7e33;
+      }
+    }
+  }
+}
+
+.banner-border {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background: #f7f7f7;
+    top: -50%;
+    left: 0%;
+    transform: rotate(45deg);
+    border: 1px solid #81b18c;
+    z-index: 2;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background: #f7f7f7;
+    bottom: -50%;
+    right: 0%;
+    transform: rotate(45deg);
+    border: 1px solid #81b18c;
+    z-index: 2;
+  }
+}
+
+.team__cards-banner {
+  position: relative;
+
+  border: 1px solid #81b18c;
+  background: #ebf4ed;
+  padding: 20px 20px 40px 23px;
+  overflow: hidden;
+
+  @media screen and (max-width: 1020px) {
+    padding: 20px 20px 30px 19px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 20px 16px 40px 20px;
+  }
+
+  &__symbol {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    max-width: 131px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+
+    @media screen and (max-width: 768px) {
+      gap: 20px;
+    }
+
+    &-title {
+      max-width: 763px;
+
+      @media screen and (max-width: 1020px) {
+        max-width: 642px;
+      }
+
+      h2 {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 50px;
+        letter-spacing: 0.02em;
+
+        color: #1d7e33;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 768px) {
+          font-size: 28px;
+          line-height: 39px;
+        }
+      }
+    }
+
+    &-descr {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      @media screen and (max-width: 1020px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      &__left {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+
+        .descr__left-icon {
+          flex-shrink: 0;
+          width: 40px;
+          height: 40px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .descr__left-text {
+          p {
+            max-width: 460px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+
+            color: #191919;
+
+            @media screen and (max-width: 1020px) {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+
+      &__right {
+        overflow: hidden;
+
+        @media screen and (max-width: 365px) {
+          width: 100%;
+        }
+
+        a {
+          display: block;
+          text-align: center;
+          padding: 20px 55px;
+          background: #1d7e33;
+          position: relative;
+          //overflow: hidden;
+          border: 1px solid transparent;
+
+          @media screen and (max-width: 365px) {
+            padding: 20px 0;
+            width: 100%;
+          }
+
+          transition: 0.2s linear;
+          position: relative;
+          border: 1px solid transparent;
+          clip-path: none;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 100%;
+            background: #ebf4ed;
+            top: -70%;
+            left: 0%;
+            transform: rotate(45deg);
+            border: 1px solid transparent;
+            transition: border 0.2s linear;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 100%;
+            background: #ebf4ed;
+            bottom: -70%;
+            right: 0%;
+            transform: rotate(45deg);
+            border: 1px solid transparent;
+            transition: border 0.2s linear;
+          }
+
+          span {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 25px;
+            letter-spacing: 0em;
+            text-align: center;
+
+            color: #fff;
+            transition: 0.2 linear;
+          }
+        }
+      }
+    }
+  }
+}
+.team__cards-banner__content-descr__right {
+  a {
+    transition: 0.2s linear;
+    border: 1px solid transparent;
+  }
+}
+
+.team__cards-banner__content-descr__right {
+  a:hover {
+    background: transparent;
+    border: 1px solid #1d7e33;
+
+    &::after,
+    &::before {
+      border: 1px solid #1d7e33;
+    }
+
+    span {
+      color: #1d7e33;
+    }
+  }
+}

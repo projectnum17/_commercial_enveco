@@ -1,0 +1,180 @@
+.about {
+  margin-bottom: 60px;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media screen and (max-width: 1120px) {
+      flex-direction: column;
+    }
+
+    &-title {
+      h2 {
+        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 50px;
+        letter-spacing: 0.02em;
+
+        color: $green-color;
+
+        @media screen and (max-width: 1120px) {
+          font-size: 33px;
+          line-height: 46px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 28px;
+          line-height: 39px;
+        }
+      }
+    }
+
+    &-descr {
+      &__subtitle {
+        max-width: 825px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 60px;
+
+        @media screen and (max-width: 1120px) {
+          max-width: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+          margin-bottom: 20px;
+        }
+
+        p {
+          width: 100%;
+          font-size: 28px;
+          font-weight: 400;
+          line-height: 39px;
+
+          color: $decr-color;
+
+          @media screen and (max-width: 768px) {
+            font-size: 22px;
+            line-height: 30px;
+          }
+        }
+      }
+
+      &__cards {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+
+        @media screen and (max-width: 1120px) {
+          gap: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+          padding-top: 40px;
+        }
+
+        &-item {
+          max-width: 255px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          @media screen and (max-width: 768px) {
+            max-width: 100%;
+          }
+
+          h3 {
+            font-size: 45px;
+            font-weight: 600;
+            line-height: 58px;
+
+            color: $green-color;
+
+            @media screen and (max-width: 1120px) {
+              font-size: 40px;
+              line-height: 54px;
+            }
+          }
+
+          p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+
+            color: $decr-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+#readMoreButton {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    text-align: center;
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #191919;
+  }
+}
+
+.about__content-descr__subtitle {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 31px;
+
+  color: #191919;
+}
+.read-more {
+  background: transparent;
+}
+
+.about__content-descr {
+  .projects__cards-link {
+    a {
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  /* Задайте желаемую ширину экрана */
+  #textBlock p:not(:first-child) {
+    display: none;
+  }
+
+  #textBlock p:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Количество отображаемых строк */
+    -webkit-box-orient: vertical;
+  }
+  #textBlock p.active {
+    overflow: initial;
+    text-overflow: initial;
+    display: block;
+  }
+}
+
+.about__content-descr {
+  .projects__cards-link a:hover span {
+    color: #000 !important;
+  }
+}

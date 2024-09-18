@@ -1,0 +1,134 @@
+.project {
+  margin-bottom: 133px;
+
+  @media screen and (max-width: 1120px) {
+    margin-bottom: 90px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 80px;
+  }
+
+  &__content {
+    &-title {
+      margin-bottom: 30px;
+      position: relative;
+      h2 {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 50px;
+        letter-spacing: 0.02em;
+
+        color: $green-color;
+      }
+    }
+  }
+}
+
+.project__content-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px 30px;
+  margin-bottom: 32px;
+}
+
+.project__content-cards__item {
+  transition: 0.2s linear;
+}
+
+.project__content-cards__item-img {
+  margin-bottom: 20px;
+  clip-path: polygon(100% 0, 100% 90%, 94.5% 100%, 0 100%, 0 0);
+
+  max-width: 540px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.project__content-cards__item-descr {
+  h4 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 31px;
+
+    color: $decr-color;
+    transition: 0.2s linear;
+  }
+}
+.project__content-cards__item a:hover {
+  .project__content-cards__item-descr h4 {
+    color: #1d7e33;
+  }
+}
+
+.project__content-link {
+  margin: 0 auto;
+  width: 100%;
+  border: 1px solid #339e25;
+  transition: 0.2s linear;
+  //height: 67px;
+
+  background: linear-gradient(
+    -45deg,
+    transparent 7px,
+    #339e25 0px,
+    #339e25 10.2px,
+    transparent 0px,
+    transparent calc(100% - 10.2px),
+    #339e25 calc(100% - 17px),
+    #339e25 calc(100% - 5px),
+    transparent calc(100% - 22px),
+    transparent 100%
+  );
+
+  clip-path: polygon(
+    15px 0,
+    100% 0,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    0 100%,
+    0 15px
+  );
+
+  a {
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+    transition: 0.2s linear;
+
+    span {
+      display: block;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 25px;
+      text-align: center;
+      transition: 0.2s linear;
+
+      color: $decr-color;
+    }
+  }
+}
+
+.project__content-link:hover {
+  background: #1d7e33;
+  border: 1px solid transparent;
+}
+
+.project__content-link:hover a span {
+  color: #fff;
+}
+
+.project {
+  .container {
+    .project__content {
+      margin-bottom: 0;
+      &-title {
+        h2 {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
